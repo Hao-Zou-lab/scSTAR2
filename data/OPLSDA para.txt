@@ -1,0 +1,7 @@
+name	num
+nrcv	7
+nc	1
+ncox	1
+ncoy	0
+p-cutoff	0.05
+np	30
