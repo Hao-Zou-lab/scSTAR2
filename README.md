@@ -83,8 +83,8 @@ geneList_OGFSC_share <- geneList[idx_vector]
 ## PLS1 projection
 In this step, the PLS1 method is used to remove batch effect bewteen ST and RNA-seq data
 ```
-NCV <- 5 #Do not worry about this parameter for now
-minNC <- 2 #Do not worry about this parameter for now
+NCV <- 5 # Suggest to keep this unchanged，default
+minNC <- 2 # Suggest to keep this unchanged，default
 PLScomp <- 2 # Suggest to keep this unchanged
 MODEL <- PLSconstruct(t(data_matrix_sc), t(data_matrix_bulk), 'mc', NCV, PLScomp, minNC)
 ```
