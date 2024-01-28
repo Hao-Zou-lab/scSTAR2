@@ -15,7 +15,8 @@
    install.packages("scSTAR2_0.1.1.tar.gz", repos = NULL, type="source")
    ```
    2. It should be noted that if you use this method, you must ensure that there is the file "scSTAR2_0.1.1.0.tar.gz" under setwd()
-   Another method is to download the file "scSTAR2_0.1.1.0.tar.gz" and install the package from a local path.
+   Another method:
+   Is to download the file "scSTAR2_0.1.1.0.tar.gz" and install the package from a local path.
 # Step 2: run scSTAR2
 ```
 rm(list=ls())
