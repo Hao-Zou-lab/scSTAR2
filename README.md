@@ -33,14 +33,14 @@ setwd("G:/algorithms/scSTAR2/R package")
 ## load bulk RNA-seq data with prognosis information
 ```
 extdir<-system.file("extdata",package="scSTAR2")
-BRCA_bulk_1<-paste(extdir,"/txt/BRCA_bulk.txt",sep="")
+BRCA_bulk_1<-paste(extdir,"/BRCA_bulk.txt",sep="")
 data_bulk = read.table(BRCA_bulk_1, sep = "\t", stringsAsFactors = F, row.names = NULL)
 geneList_bulk = data_bulk[, 1]
 data_matrix_bulk = as.matrix(data_bulk[, 2:ncol(data_bulk)])
 data_matrix_bulk <- log2(data_matrix_bulk + 1)
 
 extdir<-system.file("extdata",package="scSTAR2")
-BRCA_bulk_prognosis_1<-paste(extdir,"/txt/BRCA_bulk_prognosis.txt",sep="")
+BRCA_bulk_prognosis_1<-paste(extdir,"/BRCA_bulk_prognosis.txt",sep="")
 meta_bulk = read.table(BRCA_bulk_prognosis_1, sep = "\t", stringsAsFactors = F, row.names = NULL)
 # patient_ID = table2cell(meta_bulk(:,1));
 resp_pattern = meta_bulk[, 2]
@@ -54,7 +54,7 @@ resp_pattern_binary[idx_Good] <- 1#1 Good, 0 Poor
 ## load ST data with prognosis information
 ```
 extdir<-system.file("extdata",package="scSTAR2")
-BRCA_ST_H1<-paste(extdir,"/txt/BRCA ST H1.txt",sep="")
+BRCA_ST_H1<-paste(extdir,"/BRCA ST H1.txt",sep="")
 data_sc = read.table(BRCA_ST_H1 ,sep = "\t", stringsAsFactors = F, row.names = NULL)
 geneList_sc <- data_sc[, 1]
 data_matrix_sc = as.matrix(data_sc[, 2:ncol(data_sc)])
@@ -287,7 +287,7 @@ dev.off()
 ## spatial plot to highlight associated spots
 ```
 extdir <- system.file("extdata", package = "scSTAR2")
-H1_seurat_1 <- file.path(extdir, "txt", "H1_seurat.rds")
+H1_seurat_1 <- file.path(extdir,  "H1_seurat.rds")
 STObj <- readRDS(H1_seurat_1)
 STObj <- SCTransform(STObj, assay = "Spatial", ncells = 3000, verbose = FALSE)
 STObj <- RunPCA(STObj)
