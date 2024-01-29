@@ -15,7 +15,7 @@
    ```
    2. It should be noted that if you use this method, you must ensure that there is the file "scSTAR2_0.1.1.0.tar.gz" under setwd().
  4. Another method is to download the file "scSTAR2_0.1.1.0.tar.gz" and install the package from a local path.
- 5.After making sure that your R package is downloaded (you can check whether there is scSTAR2 package in Packags), open the run_scSTAR2_demo_ST script and run it directly.
+ 5. After making sure that your R package is downloaded (you can check whether there is scSTAR2 package in Packags), open the run_scSTAR2_demo_ST script and run it directly.
 # Step 2: run scSTAR2
 ```
 rm(list=ls())
