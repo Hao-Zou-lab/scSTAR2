@@ -3,7 +3,7 @@
 
 1. scSTAR2,R version 4.1.2.
 2. scSTAR2 can map prognostic information to the spatial transcriptome, scSTAN-seq, ascATAC-seq data
-
+3. If you need BRCA_bulk.txt, BRCA_bulk_prognosis.txt, BRCA ST H1.txt, H1_seurat.rds, please download the inst/exdata in the scSTAR2_0.1.1.0.tar.gz package to obtain the data you need.
 # Step 1: intallation
 1. install 'Seurat','pls', 'MASS','ggplot2','readxl','tcltk','wrMisc' R package from Cran.
 2. installing STutility from github:
