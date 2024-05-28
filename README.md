@@ -20,8 +20,9 @@
 ```
 rm(list=ls())
 graphics.off()
+library(Matrix)#Matrix version 1.5-3
 library(Seurat)#Seurat version 4.1.1
-library(pls)#pls version 2.8.1
+library(pls)#pls version 2.8-1
 library(MASS)#MASS version 7.3-58.1
 library(ggplot2)#ggplot2 version 3.3.6
 library(readxl)#readxl version 1.4.1
