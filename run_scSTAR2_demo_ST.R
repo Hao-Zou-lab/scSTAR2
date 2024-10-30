@@ -1,4 +1,4 @@
-# scSTAR2,R version 4.1.2
+# scSTAR2,R version 4.1.2(This version or any version higher than it is acceptable)
 #scSTAR2 can map prognostic information to the spatial transcriptome, scSTAN-seq, ascATAC-seq data
 
 # Step 1: intallation
