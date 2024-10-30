@@ -223,7 +223,7 @@ data = readRDS("corrMat_H1.rds")
 pattern <- do.call(rbind, data$resp_pattern)
 idx_R <- which(pattern == "Good", arr.ind = TRUE)
 idx_NR <- which(pattern == "Poor", arr.ind = TRUE)
-
+#0.1.1 Version
 for (i in 0:n) {
   data1 = data[[paste0("Cor", i)]][idx_R[, 1], ]
   data2 = data[[paste0("Cor", i)]][idx_NR[, 1], ]
@@ -232,7 +232,15 @@ for (i in 0:n) {
   ggsave(file = paste0('C', i, '.tiff'), dpi = 300, compression = 'lzw', width = 6, height = 5, units = "in")
   dev.off()
 }
-
+#0.1.2 Version. The value of nrcv can be changed.
+for (i in 0:n) {
+  data1 = data[[paste0("Cor", i)]][idx_R[, 1], ]
+  data2 = data[[paste0("Cor", i)]][idx_NR[, 1], ]
+  cellindex = matrix(seq(1, ncol(data[[paste0("Cor", i)]])), nrow = 1, ncol = ncol(data[[paste0("Cor", i)]]))
+  model <- OPLSDA(data1, data2,cellindex,nrcv=7)
+  ggsave(file = paste0('C', i, '.tiff'), dpi = 300, compression = 'lzw', width = 6, height = 5, units = "in")
+  dev.off()
+}
 
 #### predicted phenotype category plot
 #The main purpose of this code is to create, visualize and save the scatter plot of t-SNE analysis for the sample grouping (phenotype) information 
