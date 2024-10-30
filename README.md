@@ -1,7 +1,7 @@
 ![scSTAR2图片](https://github.com/Hao-Zou-lab/scSTAR2/assets/115384996/301ac18e-ef77-4c39-a549-5fede0a008c2)
 # scSTAR2
 
-1. scSTAR2,R version 4.1.2.
+1. scSTAR2,R version 4.1.2(This version or any version higher than it is acceptable).
 2. scSTAR2 can map prognostic information to the spatial transcriptome, scSTAN-seq, ascATAC-seq data
 3. If you need BRCA_bulk.txt, BRCA_bulk_prognosis.txt, BRCA ST H1.txt, H1_seurat.rds, please download the files in inst/exdata in the scSTAR2_0.1.1.0.tar.gz package to obtain the data you need.
 # Step 1: intallation
