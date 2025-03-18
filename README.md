@@ -34,14 +34,14 @@ setwd("G:/algorithms/scSTAR2/R package")
 ```
 ## load bulk RNA-seq data with prognosis information
 ```
-extdir<-system.file("extdata",package="scSTAR2")
+extdir<-'./data'
 BRCA_bulk_1<-paste(extdir,"/BRCA_bulk.txt",sep="")
 data_bulk = read.table(BRCA_bulk_1, sep = "\t", stringsAsFactors = F, row.names = NULL)
 geneList_bulk = data_bulk[, 1]
 data_matrix_bulk = as.matrix(data_bulk[, 2:ncol(data_bulk)])
 data_matrix_bulk <- log2(data_matrix_bulk + 1)
 
-extdir<-system.file("extdata",package="scSTAR2")
+
 BRCA_bulk_prognosis_1<-paste(extdir,"/BRCA_bulk_prognosis.txt",sep="")
 meta_bulk = read.table(BRCA_bulk_prognosis_1, sep = "\t", stringsAsFactors = F, row.names = NULL)
 # patient_ID = table2cell(meta_bulk(:,1));
@@ -55,7 +55,6 @@ resp_pattern_binary[idx_Good] <- 1#1 Good, 0 Poor
 
 ## load ST data with prognosis information
 ```
-extdir<-system.file("extdata",package="scSTAR2")
 BRCA_ST_H1<-paste(extdir,"/BRCA ST H1.txt",sep="")
 data_sc = read.table(BRCA_ST_H1 ,sep = "\t", stringsAsFactors = F, row.names = NULL)
 geneList_sc <- data_sc[, 1]
